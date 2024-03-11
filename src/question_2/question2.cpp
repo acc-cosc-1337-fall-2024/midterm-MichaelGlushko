@@ -1,6 +1,33 @@
 #include "question2.h"
+using std::vector;
+
 
 bool test_config()
 {
     return true;
+}
+
+bool is_prime(int num)
+{
+    if(num <= 1) {
+        return false;
+    }
+    for(int i = 2; i*i <= num; i++) {
+        if(num % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+std::vector<int> get_primes(int num)
+{
+    vector<int> primes{};
+
+    for(int i = 0; i <= num; i++) {
+        if(is_prime(i) == true){
+            primes.insert(primes.end(), i);
+        }
+    }
+    return primes;
 }
