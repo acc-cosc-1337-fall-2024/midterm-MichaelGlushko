@@ -11,7 +11,7 @@ int main()
     char input;
     
 
-    while(ch != 'y')
+    do
     {
         do
         {
@@ -24,19 +24,12 @@ int main()
             cout << x << " "; 
         }
 
-        do
-        {
-        cout<<"\nEnter Y to run again or N to exit: ";
-        cin>>ch;
-        input = ch;
+        cout << "\nEnter 'Y' to run again or 'N' to exit: ";
+        cin >> ch;
         
         if(ch == 'N') {
-            cout<<"\nExited Program";
+            cout << "\nExited Program";
             break;
         }
-        }while(input != 'Y');
-    }
-
-
-    return 0;
+    }while(ch != 'y');
 }
